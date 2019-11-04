@@ -1,0 +1,371 @@
+{
+    "@context": "http://liris.cnrs.fr/silex/2011/ktbs-jsonld-context",
+    "@graph": [
+        {
+            "@id": "http://localhost:8001/nirvana_penguins/bitmask_model_roa",
+            "@type": "TraceModel",
+            "inBase": "./" ,
+            "hasUnit": "millisecond"
+        },
+        {
+            "@id": "#global" ,
+            "@type": "ObselType"
+        },
+        {
+            "@id": "#frame" ,
+            "@type": "ObselType"
+        },
+        {
+            "@id": "#p1_inputs" ,
+            "@type": "ObselType"
+        },
+        {
+            "@id": "#p2_inputs" ,
+            "@type": "ObselType"
+        },
+        {
+            "@id": "#p1_other_bools" ,
+            "@type": "ObselType"
+        },
+        {
+            "@id": "#p2_other_bools" ,
+            "@type": "ObselType"
+        },
+        {
+            "@id": "#stage" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#global"] ,
+            "hasAttributeDatatype": ["xsd:string"] ,
+            "label": "stage"
+        },
+		{
+            "@id": "#timer" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#global"] ,
+            "hasAttributeDatatype": ["xsd:int"] ,
+            "label": "timer"
+        },
+		{
+            "@id": "#max_stocks" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#global"] ,
+            "hasAttributeDatatype": ["xsd:int"] ,
+            "label": "max_stocks"
+        },
+		{
+            "@id": "#n_players" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#global"] ,
+            "hasAttributeDatatype": ["xsd:int"] ,
+            "label": "n_players"
+        },
+		{
+            "@id": "#p1_character" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#global"] ,
+            "hasAttributeDatatype": ["xsd:string"] ,
+            "label": "p1_character"
+        },
+		{
+            "@id": "#p2_character" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#global"] ,
+            "hasAttributeDatatype": ["xsd:string"] ,
+            "label": "p2_character"
+        },
+		{
+            "@id": "#winner" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#global"] ,
+            "hasAttributeDatatype": ["xsd:int"] ,
+            "label": "winner"
+        },
+		{
+            "@id": "#n" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#frame"] ,
+            "hasAttributeDatatype": ["xsd:int"] ,
+            "label": "frame number"
+        },
+		{
+            "@id": "#p1_x" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#frame"] ,
+            "hasAttributeDatatype": ["xsd:int"] ,
+            "label": "p1_x"
+        },
+		{
+            "@id": "#p1_y" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#frame"] ,
+            "hasAttributeDatatype": ["xsd:int"] ,
+            "label": "p1_y"
+        },
+		{
+            "@id": "#p1_stocks" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#frame"] ,
+            "hasAttributeDatatype": ["xsd:int"] ,
+            "label": "p1_stocks"
+        },
+		{
+            "@id": "#p1_dmg" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#frame"] ,
+            "hasAttributeDatatype": ["xsd:int"] ,
+            "label": "p1_dmg"
+        },
+		{
+            "@id": "#p1_attack_down" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p1_inputs"] ,
+            "hasAttributeDatatype": ["xsd:boolean"] ,
+            "label": "p1_attack_down"
+        },
+		{
+            "@id": "#p1_special_down" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p1_inputs"] ,
+            "hasAttributeDatatype": ["xsd:boolean"] ,
+            "label": "p1_special_down"
+        },
+		{
+            "@id": "#p1_jump_down" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p1_inputs"] ,
+            "hasAttributeDatatype": ["xsd:boolean"] ,
+            "label": "p1_jump_down"
+        },
+		{
+            "@id": "#p1_shield_down" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p1_inputs"] ,
+            "hasAttributeDatatype": ["xsd:boolean"] ,
+            "label": "p1_shield_down"
+        },
+		{
+            "@id": "#p1_strong_down" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p1_inputs"] ,
+            "hasAttributeDatatype": ["xsd:boolean"] ,
+            "label": "p1_strong_down"
+        },
+		{
+            "@id": "#p1_up_down" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p1_inputs"] ,
+            "hasAttributeDatatype": ["xsd:boolean"] ,
+            "label": "p1_up_down"
+        },
+		{
+            "@id": "#p1_down_down" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p1_inputs"] ,
+            "hasAttributeDatatype": ["xsd:boolean"] ,
+            "label": "p1_down_down"
+        },
+		{
+            "@id": "#p1_left_down" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p1_inputs"] ,
+            "hasAttributeDatatype": ["xsd:boolean"] ,
+            "label": "p1_left_down"
+        },
+		{
+            "@id": "#p1_right_down" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p1_inputs"] ,
+            "hasAttributeDatatype": ["xsd:boolean"] ,
+            "label": "p1_right_down"
+        },
+		{
+            "@id": "#p1_taunt_down" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p1_inputs"] ,
+            "hasAttributeDatatype": ["xsd:boolean"] ,
+            "label": "p1_taunt_down"
+        },
+		{
+            "@id": "#p1_joy_dir" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#frame"] ,
+            "hasAttributeDatatype": ["xsd:int"] ,
+            "label": "p1_joy_dir"
+        },
+		{
+            "@id": "#p1_free" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p1_other_bools"] ,
+            "hasAttributeDatatype": ["xsd:int"] ,
+            "label": "p1_free"
+        },
+		{
+            "@id": "#p1_has_walljump" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p1_other_bools"] ,
+            "hasAttributeDatatype": ["xsd:int"] ,
+            "label": "p1_has_walljump"
+        },
+		{
+            "@id": "#p1_has_airdodge" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p1_other_bools"] ,
+            "hasAttributeDatatype": ["xsd:int"] ,
+            "label": "p1_has_airdodge"
+        },
+		{
+            "@id": "#p1_can_fast_fall" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p1_other_bools"] ,
+            "hasAttributeDatatype": ["xsd:int"] ,
+            "label": "p1_can_fast_fall"
+        },
+		{
+            "@id": "#p1_state" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#frame"] ,
+            "hasAttributeDatatype": ["xsd:int"] ,
+            "label": "p1_state"
+        },
+		{
+            "@id": "#p2_x" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#frame"] ,
+            "hasAttributeDatatype": ["xsd:int"] ,
+            "label": "p2_x"
+        },
+		{
+            "@id": "#p2_y" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#frame"] ,
+            "hasAttributeDatatype": ["xsd:int"] ,
+            "label": "p2_y"
+        },
+		{
+            "@id": "#p2_stocks" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#frame"] ,
+            "hasAttributeDatatype": ["xsd:int"] ,
+            "label": "p2_stocks"
+        },
+		{
+            "@id": "#p2_dmg" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#frame"] ,
+            "hasAttributeDatatype": ["xsd:int"] ,
+            "label": "p2_dmg"
+        },
+    {
+            "@id": "#p2_attack_down" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p1_inputs"] ,
+            "hasAttributeDatatype": ["xsd:boolean"] ,
+            "label": "p2_attack_down"
+        },
+		{
+            "@id": "#p2_special_down" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p1_inputs"] ,
+            "hasAttributeDatatype": ["xsd:boolean"] ,
+            "label": "p2_special_down"
+        },
+		{
+            "@id": "#p2_jump_down" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p1_inputs"] ,
+            "hasAttributeDatatype": ["xsd:boolean"] ,
+            "label": "p2_jump_down"
+        },
+		{
+            "@id": "#p2_shield_down" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p1_inputs"] ,
+            "hasAttributeDatatype": ["xsd:boolean"] ,
+            "label": "p2_shield_down"
+        },
+		{
+            "@id": "#p2_strong_down" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p1_inputs"] ,
+            "hasAttributeDatatype": ["xsd:boolean"] ,
+            "label": "p2_strong_down"
+        },
+		{
+            "@id": "#p2_up_down" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p1_inputs"] ,
+            "hasAttributeDatatype": ["xsd:boolean"] ,
+            "label": "p2_up_down"
+        },
+		{
+            "@id": "#p2_down_down" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p1_inputs"] ,
+            "hasAttributeDatatype": ["xsd:boolean"] ,
+            "label": "p2_down_down"
+        },
+		{
+            "@id": "#p2_left_down" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p1_inputs"] ,
+            "hasAttributeDatatype": ["xsd:boolean"] ,
+            "label": "p2_left_down"
+        },
+		{
+            "@id": "#p2_right_down" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p1_inputs"] ,
+            "hasAttributeDatatype": ["xsd:boolean"] ,
+            "label": "p2_right_down"
+        },
+		{
+            "@id": "#p2_taunt_down" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p1_inputs"] ,
+            "hasAttributeDatatype": ["xsd:boolean"] ,
+            "label": "p2_taunt_down"
+        },
+		{
+            "@id": "#p2_joy_dir" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#frame"] ,
+            "hasAttributeDatatype": ["xsd:int"] ,
+            "label": "p2_joy_dir"
+        },
+		{
+            "@id": "#p2_free" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p2_other_bools"] ,
+            "hasAttributeDatatype": ["xsd:int"] ,
+            "label": "p2_free"
+        },
+		{
+            "@id": "#p2_has_walljump" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p2_other_bools"] ,
+            "hasAttributeDatatype": ["xsd:int"] ,
+            "label": "p2_has_walljump"
+        },
+		{
+            "@id": "#p2_has_airdodge" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p2_other_bools"] ,
+            "hasAttributeDatatype": ["xsd:int"] ,
+            "label": "p2_has_airdodge"
+        },
+		{
+            "@id": "#p2_can_fast_fall" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#p2_other_bools"] ,
+            "hasAttributeDatatype": ["xsd:int"] ,
+            "label": "p2_can_fast_fall"
+        },
+		{
+            "@id": "#p2_state" ,
+            "@type": "AttributeType" ,
+            "hasAttributeObselType": ["#frame"] ,
+            "hasAttributeDatatype": ["xsd:int"] ,
+            "label": "p2_state"
+        }
+		]
+}
