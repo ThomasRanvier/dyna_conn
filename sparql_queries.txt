@@ -1,0 +1,17 @@
+{
+    "@id": "positions_roa/",
+    "@type": "ComputedTrace",
+    "hasMethod": "sparql",
+    "hasSource": [ "real_trace_roa/" ],
+    "parameter": [ "sparql= \n PREFIX : <http://liris.cnrs.fr/silex/2009/ktbs#> \n PREFIX m: <http://localhost:8001/nirvana_penguins/model_roa#> \n CONSTRUCT { \n [ a m:frame ; \n m:n ?n ; \n m:p1_x ?p1_x ; \n m:p1_y ?p1_y ; \n m:p2_x ?p2_x ; \n m:p2_y ?p2_y ; \n :hasTrace <%(__destination__)s> ; \n :hasBegin ?begin ; \n :hasEnd ?end ; \n :hasSourceObsel ?o1 ; \n ] . \n } WHERE { \n ?o1 :hasBegin ?begin . \n ?o1 :hasEnd ?end . \n ?o1 m:n ?n . \n ?o1 m:p1_x ?p1_x . \n ?o1 m:p1_y ?p1_y . \n ?o1 m:p2_x ?p2_x . \n ?o1 m:p2_y ?p2_y . BIND ((?p2_x-?p1_x)*(?p2_y-?p1_y) AS ?distance)\n }" ]
+}
+
+
+
+{
+    "@id": "positions_distance_roa/",
+    "@type": "ComputedTrace",
+    "hasMethod": "sparql",
+    "hasSource": [ "real_trace_roa/" ],
+    "parameter": [ "sparql= \n PREFIX : <http://liris.cnrs.fr/silex/2009/ktbs#> \n PREFIX m: <http://localhost:8001/nirvana_penguins/model_roa#> \n CONSTRUCT { \n [ a m:frame ; \n m:n ?n ; \n m:p1_x ?p1_x ; \n m:p1_y ?p1_y ; \n m:p2_x ?p2_x ; \n m:p2_y ?p2_y ; \n m:distance ?distance ; \n :hasTrace <%(__destination__)s> ; \n :hasBegin ?begin ; \n :hasEnd ?end ; \n :hasSourceObsel ?o1 ; \n ] . \n } WHERE { \n ?o1 :hasBegin ?begin . \n ?o1 :hasEnd ?end . \n ?o1 m:n ?n . \n ?o1 m:p1_x ?p1_x . \n ?o1 m:p1_y ?p1_y . \n ?o1 m:p2_x ?p2_x . \n ?o1 m:p2_y ?p2_y . BIND (((?p2_x-?p1_x)*(?p2_x-?p1_x))+(((?p2_y-?p1_y) * (?p2_y-?p1_y))) AS ?distance)\n }" ]
+}
