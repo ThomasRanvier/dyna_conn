@@ -50,10 +50,18 @@
 }
 
 {
-    "@id": "bitmask_extraction_roa/",
+    "@id": "jumpsquat_positions_roa/",
     "@type": "ComputedTrace",
     "hasMethod": "sparql",
     "hasSource": [ "final_trace_roa/" ],
-    "hasModel": [ "bimask_model_roa/" ],
-    "parameter": [ "sparql= \n PREFIX : <http://liris.cnrs.fr/silex/2009/ktbs#> \n PREFIX m: <http://localhost:8001/nirvana_penguins/model_roa#> \n CONSTRUCT { \n [ a m:frame ; \n m:n ?n ; \n m:p1_state ?p1_state ; \n m:p2_state ?p2_state ; \n m:p1_dmg ?p1_dmg ; \n m:p1_stocks ?p1_stocks ; \n m:p2_dmg ?p2_dmg ; \n m:p2_stocks ?p2_stocks ; \n :hasTrace <%(__destination__)s> ; \n :hasBegin ?begin ; \n :hasEnd ?end ; \n :hasSourceObsel ?o1 ; \n ] . \n } WHERE { \n ?o1 :hasBegin ?begin . \n ?o1 :hasEnd ?end . \n ?o1 m:p1_state ?p1_state . \n ?o1 m:p2_state ?p2_state . \n ?o1 m:n ?n . \n ?o1 m:p1_dmg ?p1_dmg . \n ?o1 m:p1_stocks ?p1_stocks . \n  ?o1 m:p2_dmg ?p2_dmg . \n  ?o1 m:p2_stocks ?p2_stocks . \n FILTER(?p1_state = 12 || ?p2_state = 12)}" ]
+    "parameter": [ "sparql= \n PREFIX : <http://liris.cnrs.fr/silex/2009/ktbs#> \n PREFIX m: <http://localhost:8001/nirvana_penguins/model_roa#> \n CONSTRUCT { \n [ a m:frame ; \n m:n ?n ; \n m:p1_x ?p1_x ; \n m:p1_y ?p1_y ; \n m:p2_x ?p2_x ; \n m:p2_y ?p2_y ; \n m:p1_state ?p1_state ; \n m:p2_state ?p2_state ; \n m:p1_dmg ?p1_dmg ; \n m:p1_stocks ?p1_stocks ; \n m:p2_dmg ?p2_dmg ; \n m:p2_stocks ?p2_stocks ; \n :hasTrace <%(__destination__)s> ; \n :hasBegin ?begin ; \n :hasEnd ?end ; \n :hasSourceObsel ?o1 ; \n ] . \n } WHERE { \n ?o1 :hasBegin ?begin . \n ?o1 :hasEnd ?end . \n ?o1 m:p1_state ?p1_state . \n ?o1 m:p2_state ?p2_state . \n ?o1 m:n ?n . \n ?o1 m:p1_dmg ?p1_dmg . \n ?o1 m:p1_stocks ?p1_stocks . \n  ?o1 m:p2_dmg ?p2_dmg . \n  ?o1 m:p2_stocks ?p2_stocks . \n ?o1 m:p1_x ?p1_x . \n ?o1 m:p1_y ?p1_y . \n ?o1 m:p2_x ?p2_x . \n ?o1 m:p2_y ?p2_y . \n FILTER(?p1_state = 12 || ?p2_state = 12)}" ]
 }
+
+{
+    "@id": "jumpsquat_roa/",
+    "@type": "ComputedTrace",
+    "hasMethod": "sparql",
+    "hasSource": [ "final_trace_roa/" ],
+    "parameter": [ "sparql= \n PREFIX : <http://liris.cnrs.fr/silex/2009/ktbs#> \n PREFIX m: <http://localhost:8001/nirvana_penguins/model_roa#> \n CONSTRUCT { \n [ a m:frame ; \n m:n ?n ; \n m:p1_state ?p1_state ; \n m:p2_state ?p2_state ; \n m:p1_x ?p1_x ; \n m:p1_y ?p1_y ; \n m:p2_x ?p2_x ; \n m:p2_y ?p2_y ; \n :hasTrace <%(__destination__)s> ; \n :hasBegin ?begin ; \n :hasEnd ?end ; \n :hasSourceObsel ?o1 ; \n ] . \n } WHERE { \n ?o1 :hasBegin ?begin . \n ?o1 :hasEnd ?end . \n ?o1 m:p1_state ?p1_state . \n ?o1 m:p2_state ?p2_state . \n ?o1 m:n ?n . \n ?o1 m:p1_x ?p1_x . \n ?o1 m:p1_y ?p1_y . \n  ?o1 m:p2_x ?p2_x . \n  ?o1 m:p2_y ?p2_y . \n FILTER(?p1_state = 28 || ?p2_state = 28)}" ]
+}
+
